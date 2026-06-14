@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdelazez Mohamed Azez | Cybersecurity Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio of Abdelazez Mohamed Azez: cloud security, SOC triage, network security, DevSecOps, AWS CloudTrail analytics, and AI security projects." />
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2e;
+      --card: #101f34;
+      --card-2: #0b1728;
+      --text: #eaf2ff;
+      --muted: #9fb3c8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: rgba(255,255,255,0.10);
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.16), transparent 35%),
+        radial-gradient(circle at top right, rgba(34,197,94,0.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 17, 31, 0.82);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: var(--text);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(56,189,248,0.35);
+      background: rgba(56,189,248,0.08);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.02;
+      margin-bottom: 18px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: clamp(18px, 2vw, 23px);
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .highlight {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #06111f;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-card {
+      background: linear-gradient(180deg, rgba(16,31,52,0.96), rgba(11,23,40,0.96));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-card h3 {
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .quick-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .quick-list div {
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .quick-list strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    section {
+      padding: 58px 0;
+    }
+
+    .section-title {
+      margin-bottom: 26px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 760px;
+      margin-top: 8px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -0.8px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(16,31,52,0.86);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56,189,248,0.45);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      font-size: 12px;
+      color: #dff6ff;
+      border: 1px solid rgba(56,189,248,0.25);
+      background: rgba(56,189,248,0.08);
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      background: rgba(16,31,52,0.86);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 6px;
+    }
+
+    .timeline-item .meta {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .timeline-item p,
+    .timeline-item li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-box {
+      text-align: center;
+      padding: 42px 24px;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(56,189,248,0.14), rgba(34,197,94,0.12)),
+        rgba(16,31,52,0.88);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 12px auto 24px;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">Abdelazez<span>.</span>Security</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Cybersecurity Portfolio • Open to Internship Opportunities</div>
+        <h1>Abdelazez Mohamed Azez<br><span>Junior Cybersecurity Engineer</span></h1>
+        <p class="subtitle">
+          MSc Information Security student and Computer Science graduate with hands-on experience in
+          <span class="highlight">IT/security operations, network troubleshooting, endpoint monitoring, cloud security analytics, and DevSecOps fundamentals.</span>
+        </p>
+
+```
+    <div class="cta-row">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="https://github.com/AbdelazezMohamedAzez" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/abdelazez-mohamed-azez/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="btn" href="mailto:azezaswany@gmail.com">Email Me</a>
+    </div>
+  </div>
+
+  <aside class="profile-card">
+    <h3>Target Cybersecurity Areas</h3>
+    <div class="quick-list">
+      <div>
+        <strong>SOC & Cloud Security</strong>
+        CloudTrail analysis, anomaly detection, alert triage, incident-style documentation.
+      </div>
+      <div>
+        <strong>Network & Endpoint Security</strong>
+        TCP/IP, DNS, DHCP, switching, firewalls, Kaspersky Security Center.
+      </div>
+      <div>
+        <strong>DevSecOps Fundamentals</strong>
+        Docker, GitHub Actions, Jenkins, Terraform basics, Trivy scanning.
+      </div>
+      <div>
+        <strong>Security Research & AI</strong>
+        RAG security chatbot, AI SOC triage, image integrity and tamper localization.
+      </div>
+    </div>
+  </aside>
+</div>
+```
+
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+          <p>
+            I am an entry-level cybersecurity candidate with a strong technical foundation across networking,
+            IT infrastructure, cloud security, and security-aware automation. I am looking for an opportunity
+            where I can learn from senior engineers, support real security operations, document findings clearly,
+            and grow into a stronger cybersecurity professional.
+          </p>
+        </div>
+
+```
+    <div class="grid-3">
+      <div class="card">
+        <h3>Education</h3>
+        <p>
+          MSc in Information Security at Queen's University. BSc in Computer Science from Arab Academy for Science,
+          Technology and Maritime Transport with a cybersecurity-focused graduation project.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Operations Background</h3>
+        <p>
+          Practical healthcare IT support experience covering Windows/Linux environments, network issues,
+          endpoint security monitoring, medical platforms, databases, and incident-style documentation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Cybersecurity Focus</h3>
+        <p>
+          Interested in SOC analysis, cloud security, network security, vulnerability assessment,
+          security documentation, and supervised penetration testing learning paths.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-title">
+      <h2>Technical Skills</h2>
+      <p>Core tools and areas I have practiced through academic projects, labs, training, and IT operations work.</p>
+    </div>
+
+    <div class="skills-wrap">
+      <span class="skill">Cybersecurity Fundamentals</span>
+      <span class="skill">SOC-style Alert Triage</span>
+      <span class="skill">AWS CloudTrail</span>
+      <span class="skill">Cloud Security</span>
+      <span class="skill">Network Security</span>
+      <span class="skill">TCP/IP</span>
+      <span class="skill">DNS / DHCP</span>
+      <span class="skill">Cisco Switching</span>
+      <span class="skill">FortiGate Basics</span>
+      <span class="skill">Palo Alto Basics</span>
+      <span class="skill">Kaspersky Security Center</span>
+      <span class="skill">Linux Ubuntu / CentOS</span>
+      <span class="skill">Windows Server</span>
+      <span class="skill">Active Directory Basics</span>
+      <span class="skill">Python</span>
+      <span class="skill">Pandas</span>
+      <span class="skill">Scikit-learn</span>
+      <span class="skill">Isolation Forest</span>
+      <span class="skill">Streamlit</span>
+      <span class="skill">Docker</span>
+      <span class="skill">GitHub Actions</span>
+      <span class="skill">Jenkins</span>
+      <span class="skill">Terraform Basics</span>
+      <span class="skill">Trivy</span>
+      <span class="skill">FAISS</span>
+      <span class="skill">Hugging Face</span>
+      <span class="skill">Technical Documentation</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+      <p>
+        Selected projects showing cloud security analytics, SOC triage, DevSecOps, network/security foundations,
+        AI security assistants, and applied information security.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <article class="card">
+        <h3>Behavior-Based Cloud Threat Detection in AWS</h3>
+        <p>
+          Built a Python cloud security analytics pipeline using AWS CloudTrail logs to detect suspicious user
+          and API activity patterns. The project includes preprocessing, feature engineering, Isolation Forest
+          anomaly detection, refined alerts, and a Streamlit dashboard for SOC-style triage.
+        </p>
+        <div class="tags">
+          <span class="tag">AWS CloudTrail</span>
+          <span class="tag">Python</span>
+          <span class="tag">Isolation Forest</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Trivy</span>
+        </div>
+        <a class="project-link" href="https://github.com/AbdelazezMohamedAzez/cloud-threat-detection" target="_blank" rel="noreferrer">View on GitHub →</a>
+      </article>
+
+      <article class="card">
+        <h3>Cyber SOC Chatbot</h3>
+        <p>
+          Team academic project for a cloud-based AI security triage assistant. The work covered AWS infrastructure,
+          Terraform provisioning, PySpark preprocessing on EMR, LLM fine-tuning, Dockerized deployment, and browser-based SOC outputs.
+        </p>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">EMR</span>
+          <span class="tag">PySpark</span>
+          <span class="tag">Docker</span>
+          <span class="tag">SOC Triage</span>
+        </div>
+        <a class="project-link" href="https://github.com/Mazen-Bahgat/Cyber-SOC-Chatbot" target="_blank" rel="noreferrer">View on GitHub →</a>
+      </article>
+
+      <article class="card">
+        <h3>AWS Infrastructure, Docker & CI/CD Labs</h3>
+        <p>
+          Hands-on labs focused on EC2, VPCs, public/private subnets, route tables, security groups, IAM,
+          S3 static hosting, CloudTrail analysis, Terraform basics, Docker, Jenkins, GitHub Actions, Linux troubleshooting, and Trivy scanning.
+        </p>
+        <div class="tags">
+          <span class="tag">AWS</span>
+          <span class="tag">VPC</span>
+          <span class="tag">IAM</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Linux</span>
+        </div>
+        <span class="project-link">Lab documentation available on request</span>
+      </article>
+
+      <article class="card">
+        <h3>Information Security RAG Chatbot</h3>
+        <p>
+          Educational InfoSec chatbot using a RAG pipeline. It covers CIA triad, phishing, malware, compliance,
+          incident response, and emerging risks using SentenceTransformers, FAISS, and FLAN-T5.
+        </p>
+        <div class="tags">
+          <span class="tag">RAG</span>
+          <span class="tag">FAISS</span>
+          <span class="tag">FLAN-T5</span>
+          <span class="tag">Hugging Face</span>
+          <span class="tag">InfoSec</span>
+        </div>
+        <a class="project-link" href="https://huggingface.co/spaces/Abdelazez2001/infosec-chatbot" target="_blank" rel="noreferrer">View Hugging Face Space →</a>
+      </article>
+
+      <article class="card">
+        <h3>Cyber Security Assistant AI</h3>
+        <p>
+          Public Hugging Face cybersecurity assistant built with Gradio and Groq API to answer questions about
+          threats, vulnerabilities, security best practices, phishing prevention, and ransomware mitigation.
+        </p>
+        <div class="tags">
+          <span class="tag">Gradio</span>
+          <span class="tag">Groq API</span>
+          <span class="tag">Llama Models</span>
+          <span class="tag">Cybersecurity Q&A</span>
+        </div>
+        <a class="project-link" href="https://huggingface.co/spaces/Abdelazez2001/Security_Chatbot" target="_blank" rel="noreferrer">View Hugging Face Space →</a>
+      </article>
+
+      <article class="card">
+        <h3>Image Authentication & Tamper Localization</h3>
+        <p>
+          BSc graduation project focused on digital image integrity. Used semi-fragile watermarking,
+          LSB embedding, DES/AES concepts, hash functions, and PSNR/MSE/SSIM metrics to detect and localize malicious image alterations.
+        </p>
+        <div class="tags">
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Cryptography</span>
+          <span class="tag">MATLAB</span>
+          <span class="tag">Image Integrity</span>
+          <span class="tag">Tamper Detection</span>
+        </div>
+        <span class="project-link">Academic project</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-title">
+      <h2>Experience</h2>
+      <p>Practical experience in IT operations, security monitoring, endpoint support, networking, and documentation.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>IT Technical Support Engineer — Magdi Yacoub Heart Foundation</h3>
+        <div class="meta">Aug 2024 – Sep 2025 | Aswan, Egypt</div>
+        <ul>
+          <li>Supported hospital systems, endpoints, medical platforms, databases, and infrastructure services across Windows and Linux environments.</li>
+          <li>Monitored service-impacting alerts using SolarWinds and Kaspersky Security Center.</li>
+          <li>Troubleshot TCP/IP, DNS, DHCP/IP assignment, Cisco switching, device connectivity, and firewall-controlled communication paths.</li>
+          <li>Managed Kaspersky Endpoint Security operations, policies, updates, endpoint monitoring, and centralized alert review.</li>
+          <li>Documented symptoms, root causes, actions taken, escalation notes, and closure updates.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Cybersecurity Track Trainee — Digilians / Egyptian Military Academy / NTI</h3>
+        <div class="meta">Sep 2025 – Sep 2026 | Egypt</div>
+        <ul>
+          <li>Completed a structured cybersecurity track covering security fundamentals, network security, operating systems, cybersecurity concepts, communication, leadership, and documentation.</li>
+          <li>Practiced teamwork, feedback acceptance, self-learning, and structured technical reporting aligned with supervised security engineering roles.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>IT Support Intern — Magdi Yacoub Heart Foundation</h3>
+        <div class="meta">Nov 2022 – Feb 2023 | Aswan, Egypt</div>
+        <ul>
+          <li>Gained hands-on exposure to CCNA practices, help desk support, server basics, Active Directory, IP assignment, system imaging, and basic security administration.</li>
+          <li>Supported user-facing troubleshooting workflows across hospital IT operations and medical platform support.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-title">
+      <h2>Education & Certifications</h2>
+      <p>Academic background and selected training relevant to cybersecurity, networking, cloud, and DevSecOps.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Education</h3>
+        <p>
+          <strong>Master of Science in Information Security</strong><br>
+          Queen's University — Currently Enrolled
+        </p>
+        <br>
+        <p>
+          <strong>BSc in Computer Science</strong><br>
+          Arab Academy for Science, Technology and Maritime Transport — 2020–2024<br>
+          GPA: 3.10 / 4.00
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Selected Certifications & Training</h3>
+        <p>
+          HCIA Training, Fortinet Firewall Administrator, Palo Alto Network Security Fundamentals,
+          Palo Alto Cybersecurity Foundation, ITI Cyber Security, MaharaTech Network Security,
+          Wireless Networks Penetration Testing, Google Cloud Skills Badges, Docker, Jenkins, Git,
+          DevSecOps Foundations, and secure cloud networking labs.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Let's Connect</h2>
+      <p>
+        I am open to cybersecurity internship opportunities, especially in SOC, network security,
+        cloud security, DevSecOps, and security operations roles.
+      </p>
+
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn primary" href="mailto:azezaswany@gmail.com">azezaswany@gmail.com</a>
+        <a class="btn" href="https://github.com/AbdelazezMohamedAzez" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/abdelazez-mohamed-azez/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://drive.google.com/file/d/1VD1MplAoP2Z9SEkIg2CxDmV8hMJFzueE" target="_blank" rel="noreferrer">Portfolio PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Abdelazez Mohamed Azez. Cybersecurity Portfolio.
+    </div>
+  </footer>
+</body>
+</html>
