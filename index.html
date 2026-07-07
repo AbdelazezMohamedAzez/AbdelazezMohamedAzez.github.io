@@ -7,7 +7,7 @@
   <title>Abdelazez Mohamed Azez | Cloud Security & DevSecOps Portfolio</title>
   <meta
     name="description"
-    content="Professional portfolio of Abdelazez Mohamed Azez covering Cloud Security, DevSecOps, AWS, GCP, Terraform, Docker, GitHub Actions, security automation, monitoring, and healthcare IT operations."
+    content="Professional portfolio of Abdelazez Mohamed Azez covering Cloud Security, DevSecOps, AWS, GCP, Terraform, Docker, GitHub Actions, OWASP ZAP, Trivy, Checkov, SBOM, Syft, Grype, software supply chain security, monitoring, and healthcare IT operations."
   />
   <meta name="author" content="Abdelazez Mohamed Azez" />
 
@@ -496,6 +496,7 @@
         <a href="#overview">Overview</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#evidence">Evidence</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -507,7 +508,7 @@
     <section class="hero">
       <div class="container">
         <h1>ABDELAZEZ MOHAMED AZEZ</h1>
-        <div class="role-line">Cloud Security - DevSecOps - AWS/GCP - IT Infrastructure</div>
+        <div class="role-line">Cloud Security - DevSecOps - Software Supply Chain Security - AWS/GCP</div>
         <div class="contact-line">
           Cairo, Egypt - <a href="mailto:azezaswany@gmail.com">azezaswany@gmail.com</a> -
           <a href="https://github.com/AbdelazezMohamedAzez" target="_blank" rel="noreferrer">GitHub</a> -
@@ -517,11 +518,13 @@
         <div class="portfolio-title">Project Portfolio</div>
         <p class="hero-subtitle">
           Hands-on projects across cloud security, DevSecOps pipelines, Infrastructure as Code security,
-          monitoring, vulnerability management, AI-assisted security triage, and healthcare IT operations.
+          multi-cloud deployment evidence, SBOM, supply chain security, monitoring, vulnerability management,
+          AI-assisted security triage, and healthcare IT operations.
         </p>
 
         <div class="actions">
           <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="https://drive.google.com/file/d/1w5NWkk1nOIwVDmvrjpwEIeuqjPsieQe3/view?usp=sharing" target="_blank" rel="noreferrer">Portfolio PDF</a>
           <a class="btn" href="https://github.com/AbdelazezMohamedAzez" target="_blank" rel="noreferrer">GitHub Profile</a>
           <a class="btn" href="mailto:azezaswany@gmail.com">Email</a>
         </div>
@@ -545,22 +548,68 @@
             </p>
             <p style="margin-top: 10px;">
               This portfolio emphasizes cloud security and DevSecOps work: AWS CloudTrail analysis, IAM and VPC concepts,
-              Terraform, Docker, GitHub Actions, Trivy, Checkov, OWASP ZAP, CI/CD security gates, and security reporting.
+              Terraform, Docker, GitHub Actions, Trivy, Checkov, OWASP ZAP, CI/CD security gates, SBOM generation,
+              Grype SBOM scanning, software supply chain security, and security evidence reporting.
             </p>
           </div>
 
           <div class="metrics">
             <div class="metric">
-              <strong>2</strong>
-              <span>Flagship DevSecOps and IaC security repositories</span>
+              <strong>2+</strong>
+              <span>Flagship DevSecOps, cloud security, and IaC security repositories</span>
             </div>
             <div class="metric">
               <strong>AWS + GCP</strong>
-              <span>Cloud security and infrastructure security coverage</span>
+              <span>Practical cloud deployment, IaC security, and cleanup evidence</span>
             </div>
             <div class="metric">
-              <strong>CI/CD Gates</strong>
-              <span>Secrets, SAST, SCA, container, DAST, and IaC scanning</span>
+              <strong>CI/CD + SBOM</strong>
+              <span>Secrets, SAST, SCA, container, DAST, IaC, SBOM, and supply chain security coverage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Latest Security Evidence</h2>
+          <p>Recent portfolio updates covering multi-cloud deployment, runtime scanning, SBOM, and supply chain security.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Week 9 - Practical Multi-Cloud Secure Deployment</h3>
+            <ul>
+              <li>Deployed the Flask application on AWS EC2 using Docker and collected runtime validation evidence.</li>
+              <li>Ran Trivy runtime container scanning and OWASP ZAP DAST against the AWS endpoint.</li>
+              <li>Deployed the same application on GCP Cloud Run using Artifact Registry and Cloud Build.</li>
+              <li>Collected Cloud Run logs, ran OWASP ZAP against the GCP endpoint, and deleted all temporary cloud resources after testing.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">AWS EC2</span>
+              <span class="tag">GCP Cloud Run</span>
+              <span class="tag">Artifact Registry</span>
+              <span class="tag">Trivy</span>
+              <span class="tag">OWASP ZAP</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Week 10 - Software Supply Chain Security</h3>
+            <ul>
+              <li>Generated a Software Bill of Materials for the Docker image using Syft.</li>
+              <li>Scanned the Syft-generated SBOM using Grype and documented vulnerability triage notes.</li>
+              <li>Added a GitHub Actions workflow to automate SBOM generation and SBOM vulnerability scanning.</li>
+              <li>Documented a safe Cosign image signing strategy without committing private signing keys.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">SBOM</span>
+              <span class="tag">Syft</span>
+              <span class="tag">Grype</span>
+              <span class="tag">Cosign</span>
+              <span class="tag">Supply Chain Security</span>
             </div>
           </div>
         </div>
@@ -577,15 +626,15 @@
         <div class="skills-grid">
           <div class="skill-box">
             <h3>Cloud Security / AWS / GCP</h3>
-            <p>AWS EC2, VPC, public/private subnets, route tables, security groups, IAM, S3, CloudTrail, EMR basics, cloud monitoring, GCP fundamentals, secure cloud network concepts.</p>
+            <p>AWS EC2, VPC, public/private subnets, route tables, security groups, IAM, S3, CloudTrail, GCP Cloud Run, Artifact Registry, Cloud Build, Cloud Logging, and secure cloud network concepts.</p>
           </div>
           <div class="skill-box">
             <h3>DevSecOps / CI/CD</h3>
-            <p>Git, GitHub, GitHub Actions, Jenkins, CI/CD fundamentals, workflow hardening, security gates, Trivy, OWASP ZAP, Checkov, CodeQL, Semgrep, Gitleaks.</p>
+            <p>Git, GitHub, GitHub Actions, Jenkins, CI/CD fundamentals, workflow hardening, security gates, Trivy, OWASP ZAP, Checkov, CodeQL, Semgrep, Gitleaks, Syft, Grype, SBOM, and Cosign strategy.</p>
           </div>
           <div class="skill-box">
             <h3>Infrastructure / Containers</h3>
-            <p>Terraform basics, Infrastructure as Code concepts, Docker, Dockerfile hardening, non-root containers, healthchecks, Linux troubleshooting workflows.</p>
+            <p>Terraform, Infrastructure as Code security concepts, Docker, Dockerfile hardening, non-root containers, healthchecks, container image evidence, and Linux troubleshooting workflows.</p>
           </div>
           <div class="skill-box">
             <h3>Security Monitoring</h3>
@@ -613,19 +662,20 @@
         <article class="project">
           <h3><span class="project-number">1.</span> Secure DevSecOps Starter - Flask Security Pipeline</h3>
           <div class="info-grid">
-            <div><strong>Category:</strong> DevSecOps / AppSec / CI/CD Security</div>
-            <div><strong>Infrastructure:</strong> GitHub Actions / Docker / Flask</div>
-            <div><strong>Tools & Stack:</strong> Python, Flask, Docker, GitHub Actions, Gitleaks, Semgrep, CodeQL, pip-audit, Trivy, OWASP ZAP</div>
+            <div><strong>Category:</strong> DevSecOps / AppSec / Cloud Security / Supply Chain Security</div>
+            <div><strong>Infrastructure:</strong> GitHub Actions / Docker / AWS EC2 / GCP Cloud Run</div>
+            <div><strong>Tools & Stack:</strong> Python, Flask, Docker, GitHub Actions, Gitleaks, Semgrep, CodeQL, pip-audit, Trivy, OWASP ZAP, Syft, Grype, Cosign strategy</div>
             <div><strong>GitHub:</strong> <a href="https://github.com/AbdelazezMohamedAzez/secure-devsecops-starter" target="_blank" rel="noreferrer">github.com/AbdelazezMohamedAzez/secure-devsecops-starter</a></div>
           </div>
           <p class="project-summary">
-            A secure Flask application pipeline that embeds security checks into CI/CD instead of treating security as a final manual step.
+            A secure Flask application pipeline that embeds security checks, runtime validation, cloud deployment evidence, SBOM, and supply chain security into the delivery lifecycle.
           </p>
           <ul>
             <li>Built a GitHub Actions pipeline with security gates for secrets scanning, SAST, dependency scanning, container scanning, and DAST.</li>
-            <li>Added Gitleaks, Semgrep, CodeQL, pip-audit, Trivy, OWASP ZAP baseline scanning, and security report documentation.</li>
+            <li>Added Gitleaks, Semgrep, CodeQL, pip-audit, Trivy, OWASP ZAP baseline scanning, Syft SBOM generation, and Grype SBOM vulnerability scanning.</li>
             <li>Hardened Docker execution with a non-root user, minimal runtime considerations, and container healthcheck.</li>
-            <li>Documented weekly security evidence including DAST and container security reports for portfolio review.</li>
+            <li>Completed practical AWS EC2 and GCP Cloud Run deployment evidence with runtime validation, ZAP scans, and cleanup documentation.</li>
+            <li>Documented software supply chain security evidence including SBOM reports, Grype reports, and a safe Cosign image signing strategy.</li>
           </ul>
           <div class="tags">
             <span class="tag">DevSecOps</span>
@@ -634,6 +684,10 @@
             <span class="tag">OWASP ZAP</span>
             <span class="tag">Trivy</span>
             <span class="tag">CodeQL</span>
+            <span class="tag">SBOM</span>
+            <span class="tag">Syft</span>
+            <span class="tag">Grype</span>
+            <span class="tag">Cloud Run</span>
           </div>
         </article>
 
@@ -851,7 +905,7 @@
             <a class="btn primary" href="mailto:azezaswany@gmail.com">azezaswany@gmail.com</a>
             <a class="btn" href="https://github.com/AbdelazezMohamedAzez" target="_blank" rel="noreferrer">GitHub</a>
             <a class="btn" href="https://www.linkedin.com/in/abdelazez-mohamed-azez/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn" href="https://drive.google.com/file/d/1w5NWkk1nOIwVDmvrjpwEIeuqjPsieQe3/view?usp=sharing" target="_blank" rel="noreferrer">Portfolio PDF</a>
+            <a class="btn" href="https://drive.google.com/file/d/1l1Zo7r4_wkrizymkiSINJDLe_CGhrZ4N/view?usp=sharing" target="_blank" rel="noreferrer">Portfolio PDF</a>
           </div>
         </div>
       </div>
@@ -860,7 +914,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Abdelazez Mohamed Azez. Cloud Security & DevSecOps Portfolio.
+      © 2026 Abdelazez Mohamed Azez. Cloud Security, DevSecOps & Supply Chain Security Portfolio.
     </div>
   </footer>
 </body>
