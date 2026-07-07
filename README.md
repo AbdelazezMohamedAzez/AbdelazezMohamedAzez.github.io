@@ -84,20 +84,6 @@ Any update to `index.html` pushed to the `main` branch will update the live webs
 
 ---
 
-## How to Update
-
-Basic update workflow:
-
-```bash
-git status
-git add index.html README.md
-git commit -m "Update portfolio website"
-git push origin main
-```
-
-After pushing to `main`, check the live website to confirm that the update was published correctly.
-
----
 
 ## Notes
 
