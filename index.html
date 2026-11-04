@@ -32,5 +32,8 @@
     const label = card.querySelector('.project-top span');
     label.textContent = `${String(index + 1).padStart(2, '0')} · ${label.textContent.replace(/^\d+\s*·\s*/, '')}`;
   });
+  const credlyUrl = 'https://www.credly.com/users/abdelazez-mohamed.fcc50945';
+  document.querySelector('.hero .actions').insertAdjacentHTML('beforeend', `<a class="button" href="${credlyUrl}" target="_blank" rel="noreferrer">Credly badges ↗</a>`);
+  document.querySelector('#skills').insertAdjacentHTML('afterend', `<section id="credentials"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Credentials</div><h2>Verified learning, ready to review.</h2></div><p>Explore Abdelazez's current digital credentials and the issuer-backed evidence behind each badge.</p></div><div class="overview-grid"><article class="statement"><h3>Credly digital credentials</h3><p>Use the Credly profile to review badges, issuing organizations, skills, issue dates, and verification details in one place.</p><div class="actions"><a class="button primary" href="${credlyUrl}" target="_blank" rel="noreferrer">View Credly profile ↗</a></div></article><div class="facts"><div class="fact"><strong>Verified</strong><span>Issuer-backed digital credentials</span></div><div class="fact"><strong>Current</strong><span>Profile reflects newly earned badges</span></div><div class="fact"><strong>Shareable</strong><span>One link for review and verification</span></div></div></div></div></section>`);
 </script>
 </body></html>
