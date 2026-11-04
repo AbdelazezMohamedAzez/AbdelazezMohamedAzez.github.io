@@ -23,5 +23,14 @@
 <script>
   document.querySelector('.proof-stats strong').textContent = '8';
   document.querySelector('.projects').insertAdjacentHTML('beforeend', `<article class="project" data-category="ai"><div class="project-top"><span>08 · Team project</span><span>AI SAST</span></div><h3>OpenSAST</h3><p>Local-first, AI-assisted static application security testing for Python that combines CodeQL suspects, focused evidence, and LLM verification for reviewer confirmation.</p><div class="chips"><span class="chip">Python</span><span class="chip">CodeQL</span><span class="chip">LLM verification</span><span class="chip">GitHub Actions</span></div><details><summary>View my contribution</summary><ul><li>Contributed to the Python CLI, installation workflow, GitHub Actions integration, usage documentation and integration tests.</li><li>Worked with the team on local-first analysis and developer-friendly remediation guidance.</li><li>The project evaluates suspected findings for four Python vulnerability classes; it does not claim complete OWASP coverage.</li></ul></details><a class="project-link" href="https://github.com/marwanahmedaly/opensast" target="_blank" rel="noreferrer">View repository</a></article>`);
+  const projectOrder = ['OpenSAST', 'Secure DevSecOps Starter', 'Behavior-Based Cloud Threat Detection', 'Multi-Cloud IaC Security Scanning', 'Cyber SOC Chatbot', 'Information Security RAG Chatbot', 'Cyber Security Assistant AI', 'Image Authentication & Tamper Detection'];
+  const projects = document.querySelector('.projects');
+  projectOrder.forEach((title, index) => {
+    const card = Array.from(projects.querySelectorAll('.project')).find(project => project.querySelector('h3').textContent.trim() === title);
+    if (!card) return;
+    projects.append(card);
+    const label = card.querySelector('.project-top span');
+    label.textContent = `${String(index + 1).padStart(2, '0')} · ${label.textContent.replace(/^\d+\s*·\s*/, '')}`;
+  });
 </script>
 </body></html>
